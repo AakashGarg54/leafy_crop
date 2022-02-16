@@ -1,13 +1,12 @@
 .container1 {
   width: 98vw;
-  height: 65vh;
+  height: 60vh;
 }
 
 .cl1,
 .imgsec {
   /* background: #000; */
   width: 38vw;
-  margin-top: 50px;
   height: 72vh;
   display: flex;
   flex-wrap: nowrap;

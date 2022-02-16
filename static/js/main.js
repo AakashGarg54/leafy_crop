@@ -67,6 +67,11 @@ $(document).ready(function () {
       },
     });
   });
+
+  $("#back").click(function () {
+    $(".before_predication").show(1000);
+    $(".after_predication").hide(1000);
+  });
 });
 
 //$(document).on("submit", "#login-number", function (e) {
