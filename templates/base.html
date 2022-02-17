@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="en">
-k rel="stylesheet" href="{{ url_for('static', filename='stylechat.css') }}">
-
 
 <head>
 
@@ -95,7 +93,6 @@ k rel="stylesheet" href="{{ url_for('static', filename='stylechat.css') }}">
             <script>
                 $SCRIPT_ROOT = {{ request.script_root | tojson }};
             </script>
-            js-/
             <script type="text/javascript" src="{{ url_for('static', filename='js/appchat.js') }}"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

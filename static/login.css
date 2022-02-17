@@ -22,12 +22,7 @@
 }
 
 .login {
-  width: 28vw;
-  margin-top: 100px;
-  height: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
+  margin-top: 10vh !important;
 }
 
 .img-leaf {
@@ -60,12 +55,11 @@
 
 .text-phnno,
 .text-otp {
-  border-radius: 83px;
-  width: 27vw;
-  margin-top: 17px;
-  margin-left: 50px;
-  padding: 10px 30px;
-  margin-bottom: 33px;
+  padding: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 20px;
 }
 
 .text-heading {
@@ -78,17 +72,18 @@
   width: 38vw;
   margin-top: 20px;
 }
-
+/* 
 .text-otp {
   margin-top: 77px;
   margin-left: 60px;
-}
+} */
 
 .text-error {
   margin-top: 40px;
   margin-left: 80px;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 20px;
+  text-align: center;
 }
 
 .btn-login {

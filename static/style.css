@@ -1,3 +1,8 @@
+body {
+  font-family: "Lato", sans-serif;
+  background: rgb(27, 27, 27) !important;
+}
+
 .bg {
   position: relative;
   height: 100vh;

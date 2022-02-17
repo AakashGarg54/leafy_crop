@@ -16,6 +16,10 @@
     font-size: 18px;
   }
 
+  .after_predication {
+    width: 75vw;
+  }
+
   .cl1,
   .vertical {
     display: none;
@@ -78,6 +82,7 @@
   #img-preview div {
     width: 380px;
   }
+
   .textimg {
     font-size: 40px;
     padding: 145px 0;
@@ -97,13 +102,31 @@
     margin-left: -100px;
   }
 
-  .result {
-    margin-left: 90px;
-    margin-top: 40px;
-    margin-bottom: -50px;
+  .result,
+  .preventation__result {
+    width: 85vw;
+    font-size: 1.2rem;
   }
 
-  .card-body {
-    width: 384px;
+  .styled-input {
+    width: 100%;
+  }
+
+  .contact_heading1 {
+    font-size: 50px;
+  }
+
+  .contact_heading4 {
+    font-size: 12px;
+  }
+
+  .contact-border {
+    width: 100vw;
+  }
+
+  .submit-btn {
+    width: 100%;
+    float: none;
+    text-align: center;
   }
 }

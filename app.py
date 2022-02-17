@@ -119,7 +119,7 @@ def login():
 def getOTPapi(number, email):
     # url = "https://www.fast2sms.com/dev/bulkV2"
 
-    # message = "Your OTP : " + str(generated_otp)
+    # message = str(generated_otp) + " is your Leafycrop OTP. Do not share it with anyone."
     # payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
 
     # headers = {
@@ -148,7 +148,7 @@ def validate_otp():  # Validate OTP and LOGIN to index.html
         if int(generated_otp) == int(otp) or int(otp) == 123456:
             return redirect(url_for('index'))
         else:
-            return render_template("home.html", error="You have Enter wrong OTP")
+            return render_template("home.html", error="Please enter a valid OTP")
 
 
 @app.route('/index', methods=["GET", "POST"])
@@ -158,7 +158,7 @@ def index():
         print(result)
         result_message = Message(f"Your prediction result", sender="lefycrop.otp@gmail.com",
                                  recipients=[email])
-        result_message.body = f"render_template {result}"
+        result_message.body = f"{result}"
 
         mail.send(result_message)
     return render_template('index.html')
@@ -204,21 +204,21 @@ def predictchat():
 def contact():
     if request.method == "POST":
         name = request.form["name"]
-        surname = request.form["surname"]
         email = request.form["email"]
+        phn_number = request.form["phn_number"]
         message = request.form["message"]
 
         query_message = Message("New Query at contact.html", sender="lefycrop.otp@gmail.com",
                                 recipients=["lefycrop.otp@gmail.com"])
 
-        response_message = Message(f"Thank you {name} {surname} for reaching us.", sender="lefycrop.otp@gmail.com",
+        response_message = Message(f"Thank you {name} for reaching us.", sender="lefycrop.otp@gmail.com",
                                    recipients=[email])
 
-        query_message.body = f"Name : {name} {surname} \n\nEmail : {email} \n\nMessage : {message}"
-        response_message.body = f" Hey {name} {surname} - {email} \n\nThanks for contacting us. \n\nYour request has been received and is being reviewed by our support staff. \n\n\nThank you \nRegrads, \nLeady Crop."
+        query_message.body = f"Name : {name} {phn_number} \n\nEmail : {email} \n\nMessage : {message}"
+        response_message.body = f" Hey {name} {phn_number} - {email} \n\nThanks for contacting us. \n\nYour request has been received and is being reviewed by our support staff. \n\n\nThank you \nRegrads, \nLeady Crop."
 
         response_message.html = render_template(
-            "response.html", name=name, surname=surname, message=message)
+            "response.html", name=name, phn_number=phn_number, message=message)
 
         mail.send(response_message)
         mail.send(query_message)
