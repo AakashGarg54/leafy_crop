@@ -70,17 +70,17 @@
   }
 
   .title {
-    width: 237px;
-    font-size: 22px;
+    width: 70vw;
+    font-size: 6.2vw;
   }
 
   .file-input {
-    width: 417px;
+    width: 106vw;
   }
 
   .img-upload,
   #img-preview div {
-    width: 380px;
+    width: 94vw;
   }
 
   .textimg {
@@ -91,7 +91,7 @@
   #img-preview,
   .img-preview {
     height: 360px;
-    width: 380px;
+    width: 97vw;
   }
 
   .btn-predict {
@@ -124,9 +124,19 @@
     width: 100vw;
   }
 
+  .styled-input.wide.input-responsive {
+    margin-left: 25vw;
+    width: 85vw;
+  }
+
   .submit-btn {
     width: 100%;
     float: none;
     text-align: center;
+  }
+
+  .btn-responsive {
+    width: 50vw;
+    margin-left: 43vw;
   }
 }
