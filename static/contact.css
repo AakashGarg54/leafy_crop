@@ -1,5 +1,5 @@
 .contact-border {
-  width: 45vw;
+  width: 36vw;
   padding-bottom: 1px;
   padding-top: 25px;
 }
@@ -21,6 +21,10 @@
   text-align: center;
 }
 
+.form-contact {
+  margin-left: 2vw;
+}
+
 /* ///// inputs /////*/
 
 input:focus ~ label,
@@ -32,6 +36,7 @@ textarea:valid ~ label {
   top: -5px;
   -webkit-transition: all 0.225s ease;
   transition: all 0.225s ease;
+  font-family: "Roboto", sans-serif, "arial";
 }
 
 .styled-input {

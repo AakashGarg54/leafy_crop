@@ -109,7 +109,7 @@ a {
 }
 
 .contact:hover {
-  color: #fff;
+  /* color: #fff; */
   font-size: 25px;
   font-weight: 400;
 }
