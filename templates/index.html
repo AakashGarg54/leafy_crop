@@ -35,10 +35,8 @@
         </div>
       </div>
       <div class="image-section" style="display:none;">
-
         <div class="img-preview">
           <div id="imagePreview">
-
           </div>
         </div>
         <div class="btn-predict">
@@ -87,19 +85,23 @@
       </div>
     </div>
     <form method="post" action="/index">
-      <div class="after_predication ">
+      <div class="after_predication " id="after_predication">
         <div>
-          <textarea class="result" type="text" name="result" value="Result: "></textarea>
+          <div id="result__print">I am result</div>
+          <input class="result" type="text" name="result" id="result" value="Result: ">
         </div>
         <div>
+          <div id="preventation__print">I am Preventation</div>
           <textarea class="preventation__result" type="text" name="preventation__result"
-            id="preventation__result">Hey i am text Area</textarea>
+            id="preventation__result">Preventation : </textarea>
         </div>
         <div>
           <input type="submit" class="btn-lrg submit-btn" value="Send to email">
         </div>
         <div>
-          <input type="button" class="btn-lrg submit-btn" value="More Info">
+          <a href="" target="_blank" rel="noopener" id="preventation__url">
+            <input type="button" class="btn-lrg submit-btn" value="More Info">
+          </a>
         </div>
         <div>
           <input type="button" class="btn-lrg submit-btn" id="back" value="Back">

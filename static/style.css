@@ -130,25 +130,24 @@ a {
 }
 .after_predication > div {
   text-align: center;
-  padding: 8px 0;
+  padding: 44px 0;
   font-size: 30px;
+}
+
+#result__print,
+#preventation__print {
+  font-size: 2vw;
+  text-align: justify;
+  color: white;
+}
+
+#preventation__print {
+  font-size: 1.5vw;
 }
 
 .result,
 .preventation__result {
-  background: transparent;
-  border: none;
-  font-size: 1.75rem;
-  color: white;
-  width: 35vw;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.preventation__result {
-  height: 320px;
+  display: none;
 }
 
 .img-leaf {

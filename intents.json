@@ -1,58 +1,215 @@
-{"intents": [
-        {"tag": "greeting",
-         "patterns": ["hi","Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
-         "context": [""]
-        },
-        {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-         "context": [""]
-        },
-        {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure"],
-         "context": [""]
-        },
-        {"tag": "noanswer",
-         "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please be more specific", "Not sure I understand"],
-         "context": [""]
-        },
-        {"tag": "options",
-         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-         "responses": ["Ask me how to make prediction.", "Want help contacting us?", "Ask me about what plants we currently support", "Ask me about diseases we support?","predictions not working?","Are you getting incorrect predictions?"],
-         "context": [""]
-        },
-        {"tag": "Love",
-         "patterns": ["Will you marry me?", "Do you love me?","Can we Be together forever","Will you stay by my side","can we ever get together","Will you go on a date with me","should we go out on a date","Let's hangout at night","Let's go on a date","How's your mood today"],
-         "responses": ["Yes","Yes,Let's do it!","Do you want a one night stand at my place?","Let's have a baby Flask `uwu`","Our descendents will be beautiful! :)","Our baby name will be Flason 'uwu'"],
-         "context": [""]
-        },
-        {"tag": "stepspredictions",
-         "patterns": ["How to check crop diseases?", "what are the steps involved to make predictions", "Give me a list of steps involved to make predictions", "List all steps involved to make prediction", "Which steps are involved to make predictions?" ,"How to make predictions?","How can i predict?"],
-         "responses": ["Steps for predictions:<ol><li>Login using otp.</li><li>Take the photo of infected leaf. </li><li>Choose captured image.</li><li>Click on predict.</li></ol> "],
-         "context": [""]
-        },
-        {"tag": "contactUs",
-         "patterns": ["I'm getting incorrect predictions", "your website isn't working", "I'm facing problem with your website", "I'm facing some issues", "I would like to speak to customer service","customer service","I would like to speak to customer care","chat with customer care" ,"I need help","predictions are not working for my image","I want to contact developer","I would like to contact customer service"],
-         "responses": ["We are extreamly sorry for this please contact us using <a class='click' href='/contact' target='_blank'>this link.</a>, Our Team will get in touch with you."],
-         "context": [""]
-        },
-        {"tag": "plant_list",
-         "patterns": ["I want to know which plants I can predict ", "List of supported plants", "", "Show plant supported", "can you show me plant's list","What plants do you support" ,"What plants can i predict"],
-         "responses": ["Our system can detect crop leaf diseases for following plants:<br><ol><li>Apple</li><li>Corn</li><li>Grape</li><li>Pepper Bell</li><li>Potato</li><li>Rice</li><li>Tomato</li><li>Wheat</li></ol>"],
-         "context": ["search_blood_pressure_by_patient_id"]
-        },
-        {"tag": "Diseases_list",
-         "patterns": ["can you tell me diseases list","what diseases can I predict","what are the diseases","can you list all diseases"],
-         "responses": ["Our system can detect following diseases: <ol><li>Apple scab</li><li>Apple Black rot</li><li>Apple Cedar apple rust</li><li>Apple healthy</li><li>Corn Cercospora leaf spot</li><li>Corn Common rust</li><li>Corn healthy</li><li>Corn Northern Leaf Blight</li><li>Grape Black_rot</li><li>Grape Esca </li><li>Grape healthy</li><li>Grape Leaf blight</li><li>Pepper bell Bacterial_spot</li><li>Pepper bell healthy</li><li>Potato Early blight</li><li>Potato healthy</li><li>Potato Late blight</li><li>Rice Bacterial leaf blight</li><li>Rice Leaf smut</li><li>RiceBrown spot</li><li>Tomato Bacterial spot</li><li>Tomato Early blight</li><li>Tomato healthy</li><li>Tomato Late blight</li><li>Tomato Leaf Mold</li><li>Tomato Septoria leaf spot</li><li>Tomato Spider mites Two spotted spider mite</li><li>Tomato Target_Spot</li><li>Tomato Tomato mosaic virus</li><li>Tomato Tomato Yellow Leaf Curl Virus</li><li>Wheat Healthy</li><li>Wheat septoria</li><li>Wheat stripe rust</li></ol>"],
-         "context": [""]
-        },
-        {"tag": "loginissue",
-         "patterns": ["I'm not able to login", "unable to login", "login issue", "otp not received", "otp not working","I didn't receive any otp","I didn't receive OTP","" ],
-         "responses": ["We are extreamly sorry for this please <a class='click' href='/index' target='_blank'>click Here</a> for predictions."],
-         "context": [""]
-        }
-   ]
+{
+        "intents": [
+                {
+                        "tag": "greeting",
+                        "patterns": [
+                                "hi",
+                                "Hi there",
+                                "How are you",
+                                "Is anyone there?",
+                                "Hey",
+                                "Hola",
+                                "Hello",
+                                "Good day",
+                                "Yo",
+                                "hye"
+                        ],
+                        "responses": [
+                                "Hello, thanks for asking",
+                                "Good to see you again",
+                                "Hi there, how can I help?"
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "goodbye",
+                        "patterns": [
+                                "Bye",
+                                "See you later",
+                                "Goodbye",
+                                "Nice chatting to you, bye",
+                                "Till next time"
+                        ],
+                        "responses": [
+                                "See you!",
+                                "Have a nice day",
+                                "Bye! Come back again soon."
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "thanks",
+                        "patterns": [
+                                "Thanks",
+                                "Thank you",
+                                "That's helpful",
+                                "Awesome, thanks",
+                                "Thanks for helping me"
+                        ],
+                        "responses": [
+                                "Happy to help!",
+                                "Any time!",
+                                "My pleasure"
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "noanswer",
+                        "patterns": [],
+                        "responses": [
+                                "Sorry, can't understand you",
+                                "Please be more specific",
+                                "Not sure I understand"
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "options",
+                        "patterns": [
+                                "How you could help me?",
+                                "What you can do?",
+                                "What help you provide?",
+                                "How you can be helpful?",
+                                "What support is offered"
+                        ],
+                        "responses": [
+                                "Ask me how to make prediction.",
+                                "Want help contacting us?",
+                                "Ask me about what plants we currently support",
+                                "Ask me about diseases we support?",
+                                "predictions not working?",
+                                "Are you getting incorrect predictions?"
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "Love",
+                        "patterns": [
+                                "Will you marry me?",
+                                "Do you love me?",
+                                "Can we Be together forever",
+                                "Will you stay by my side",
+                                "can we ever get together",
+                                "Will you go on a date with me",
+                                "should we go out on a date",
+                                "Let's hangout at night",
+                                "Let's go on a date",
+                                "How's your mood today"
+                        ],
+                        "responses": [
+                                "Yes",
+                                "Yes,Let's do it!",
+                                "Do you want a one night stand at my place?",
+                                "Let's have a baby Flask `uwu`",
+                                "Our descendents will be beautiful! :)",
+                                "Our baby name will be Flason 'uwu'"
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "stepspredictions",
+                        "patterns": [
+                                "How to check crop diseases?",
+                                "what are the steps involved to make predictions",
+                                "Give me a list of steps involved to make predictions",
+                                "List all steps involved to make prediction",
+                                "Which steps are involved to make predictions?",
+                                "How to make predictions?",
+                                "How can i predict?"
+                        ],
+                        "responses": [
+                                "Steps for predictions:<ol><li>Login using otp.</li><li>Take the photo of infected leaf. </li><li>Choose captured image.</li><li>Click on predict.</li></ol> "
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "contactUs",
+                        "patterns": [
+                                "I'm getting incorrect predictions",
+                                "your website isn't working",
+                                "I'm facing problem with your website",
+                                "I'm facing some issues",
+                                "I would like to speak to customer service",
+                                "customer service",
+                                "I would like to speak to customer care",
+                                "chat with customer care",
+                                "I need help",
+                                "predictions are not working for my image",
+                                "I want to contact developer",
+                                "I would like to contact customer service"
+                        ],
+                        "responses": [
+                                "We are extreamly sorry for this please contact us using <a class='click' href='/contact' target='_blank'>this link.</a>, Our Team will get in touch with you."
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "plant_list",
+                        "patterns": [
+                                "I want to know which plants I can predict ",
+                                "List of supported plants",
+                                "",
+                                "Show plant supported",
+                                "can you show me plant's list",
+                                "What plants do you support",
+                                "What plants can i predict"
+                        ],
+                        "responses": [
+                                "Our system can detect crop leaf diseases for following plants:<br><ol><li>Apple</li><li>Corn</li><li>Grape</li><li>Pepper Bell</li><li>Potato</li><li>Rice</li><li>Tomato</li><li>Wheat</li></ol>"
+                        ],
+                        "context": [
+                                "search_blood_pressure_by_patient_id"
+                        ]
+                },
+                {
+                        "tag": "Diseases_list",
+                        "patterns": [
+                                "can you tell me diseases list",
+                                "what diseases can I predict",
+                                "what are the diseases",
+                                "can you list all diseases"
+                        ],
+                        "responses": [
+                                "Our system can detect following diseases: <ol><li>Apple scab</li><li>Apple Black rot</li><li>Apple Cedar apple rust</li><li>Apple healthy</li><li>Corn Cercospora leaf spot</li><li>Corn Common rust</li><li>Corn healthy</li><li>Corn Northern Leaf Blight</li><li>Grape Black_rot</li><li>Grape Esca </li><li>Grape healthy</li><li>Grape Leaf blight</li><li>Pepper bell Bacterial_spot</li><li>Pepper bell healthy</li><li>Potato Early blight</li><li>Potato healthy</li><li>Potato Late blight</li><li>Rice Bacterial leaf blight</li><li>Rice Leaf smut</li><li>RiceBrown spot</li><li>Tomato Bacterial spot</li><li>Tomato Early blight</li><li>Tomato healthy</li><li>Tomato Late blight</li><li>Tomato Leaf Mold</li><li>Tomato Septoria leaf spot</li><li>Tomato Spider mites Two spotted spider mite</li><li>Tomato Target_Spot</li><li>Tomato Tomato mosaic virus</li><li>Tomato Tomato Yellow Leaf Curl Virus</li><li>Wheat Healthy</li><li>Wheat septoria</li><li>Wheat stripe rust</li></ol>"
+                        ],
+                        "context": [
+                                ""
+                        ]
+                },
+                {
+                        "tag": "loginissue",
+                        "patterns": [
+                                "I'm not able to login",
+                                "unable to login",
+                                "login issue",
+                                "otp not received",
+                                "otp not working",
+                                "I didn't receive any otp",
+                                "I didn't receive OTP",
+                                ""
+                        ],
+                        "responses": [
+                                "We are extreamly sorry for this please <a class='click' href='/index' target='_blank'>click Here</a> for predictions."
+                        ],
+                        "context": [
+                                ""
+                        ]
+                }
+        ]
 }

@@ -155,10 +155,11 @@ def validate_otp():  # Validate OTP and LOGIN to index.html
 def index():
     if request.method == "POST":
         result = request.form["result"]
-        print(result)
+        preventation__result = request.form["preventation__result"]
+        # preventation__url = request.form["preventation__url"]
         result_message = Message(f"Your prediction result", sender="lefycrop.otp@gmail.com",
                                  recipients=[email])
-        result_message.body = f"{result}"
+        result_message.body = f"{result}\n\nPreventation : {preventation__result}\n\nMore Info ="
 
         mail.send(result_message)
     return render_template('index.html')

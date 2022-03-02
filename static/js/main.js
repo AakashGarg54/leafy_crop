@@ -2,7 +2,6 @@ $(document).ready(function () {
   // Init
   $(".image-section").hide();
   $(".newl").hide();
-  $("#result").hide();
   $(".after_predication").hide();
 
   //$(".after-otp").hide();
@@ -32,12 +31,7 @@ $(document).ready(function () {
     $("#imagehidden").hide();
     $(".image-section").show();
     $("#btn-predict").css("margin-left", "240px");
-    $("#result").css("margin-left", "150px");
-    $("#result").css("width", "400px");
     $("#btn-predict").show();
-    $("#result").text("");
-    $("#result").hide();
-
     readURL(this);
   });
 
@@ -61,9 +55,22 @@ $(document).ready(function () {
       success: function (data) {
         // Get and display the result
         $(".newl").hide();
-        $(".result").val(" Result:  " + data);
+        $("#result__print").html("Result:  " + data);
+        $(".result").val("Result:  " + data);
         $(".before_predication").hide(1500);
         $(".after_predication").show(1500);
+        $.ajax({
+          url: "static/preventation.json",
+          success: function (preventation_json) {
+            $(preventation_json.preventation).each((index, value) => {
+              if (value.crop === data) {
+                $("#preventation__print").html(value.preventation);
+                $("#preventation__result").html(value.preventation);
+                $("#preventation__url").attr("href", value.url);
+              }
+            });
+          },
+        });
       },
     });
   });
