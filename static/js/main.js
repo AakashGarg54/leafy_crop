@@ -62,11 +62,24 @@ $(document).ready(function () {
         $.ajax({
           url: "static/preventation.json",
           success: function (preventation_json) {
-            $(preventation_json.preventation).each((index, value) => {
+            $(preventation_json.Treatment).each((index, value) => {
               if (value.crop === data) {
-                $("#preventation__print").html(value.preventation);
-                $("#preventation__result").html(value.preventation);
+                const preventation__treatment = `
+                Generic Treatment: <br>
+                <br>
+                <ol>
+                <li>Understand the mechanism of infection.</li>
+                <li>Choose the right plants for your site.</li>
+                <li>Use disease-resistant varieties</li>
+                <li>Keep a clean garden: roguing, rotating crops, and sanitizing tools.</li>
+                <li>Create a well-balanced soil.</li>
+                </ol>
+                `;
+
+                $("#preventation__print").html(preventation__treatment);
+                $("#preventation__result").html(preventation__treatment);
                 $("#preventation__url").attr("href", value.url);
+                console.log("True");
               }
             });
           },

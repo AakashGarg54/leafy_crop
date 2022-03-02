@@ -130,7 +130,7 @@ a {
 }
 .after_predication > div {
   text-align: center;
-  padding: 44px 0;
+  padding: 24px 0;
   font-size: 30px;
 }
 
@@ -142,12 +142,17 @@ a {
 }
 
 #preventation__print {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
 }
 
 .result,
 .preventation__result {
   display: none;
+}
+
+.btn_index {
+  width: 15vw;
+  margin-left: 10.5vw;
 }
 
 .img-leaf {

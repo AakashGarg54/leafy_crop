@@ -139,4 +139,18 @@
     width: 50vw;
     margin-left: 43vw;
   }
+
+  #result__print,
+  #preventation__print {
+    width: 309px;
+    text-align: left;
+  }
+
+  #result__print {
+    font-size: 22px;
+  }
+
+  #preventation__print {
+    font-size: 18px;
+  }
 }

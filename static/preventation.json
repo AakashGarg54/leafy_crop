@@ -1,33 +1,108 @@
 {
-    "preventation": [
+    "Treatment": [
         {
             "crop": "Apple scab",
-            "preventation": [
-                "Preventation: <br>",
-                "1. Choose scab-resistant  varieties of apple or crabapple trees.<br>",
-                "2. Rake up and discard any fallen leaves or fruit on a regular basis, and never leave fallen leaves or fruit on the ground over winter.<br> ",
-                "3. Apple scab fungus overwinters on fallen leaves and fruit."
-            ],
             "url": "https://www.independenttree.com/apple-scab-identification-prevention-treatment-2/#:~:text=Remember%3A%20Apple%20scab%20is%20treated,spray%20is%20all%20you%20need."
         },
         {
-            "crop": "Tomato Spider mites Two spotted spider mite",
-            "preventation": [
-                "Preventation: <br>",
-                "1. Choose scab-resistant varieties of apple or crabapple trees2.<br>",
-                "2. Rake up and discard any fallen leaves or fruit on a regular basis, and never leave fallen leaves or fruit on the ground over winter. <br>",
-                "3. Apple scab fungus overwinters on fallen leaves and fruit.2<br>" 
-            ],
-            "url": "https://www.independenttree.com/apple-scab-identification-prevention-treatment-2/#:~:text=Remember%3A%20Apple%20scab%20is%20treated,spray%20is%20all%20you%20need."
+            "crop": "Apple Black rot",
+            "url": "https://extension.umn.edu/plant-diseases/black-rot-apple"
         },
         {
             "crop": "Apple Cedar apple rust",
-            "preventation": [
-                "1. Choose scab-resistant varieties of apple or crabapple trees.3<br>",
-                "2. Rake up and discard any fallen leaves or fruit on a regular basis, and never leave fallen leaves or fruit on the ground over winter.<br> ",
-                "3. Apple scab fungus overwinters on fallen leaves and fruit.3<br>"
-            ],
-            "url": "https://www.independenttree.com/apple-scab-identification-prevention-treatment-2/#:~:text=Remember%3A%20Apple%20scab%20is%20treated,spray%20is%20all%20you%20need."
+            "url": "https://www.gardeningknowhow.com/edible/fruits/apples/cedar-apple-rust-control.htm"
+        },
+        {
+            "crop": "Corn Cercospora leaf spot",
+            "url": "https://agrilifeextension.tamu.edu/library/landscaping/cercospora-leaf-spot-of-roses/"
+        },
+        {
+            "crop": "Corn (maize) Common rust",
+            "url": "https://www.gardeningknowhow.com/edible/vegetables/corn/corn-rust-fungus-control.htm#:~:text=To%20reduce%20the%20incidence%20of,immediately%20spray%20with%20a%20fungicide."
+        },
+        {
+            "crop": "Corn Northern Leaf Blight",
+            "url": "https://www.gardeningknowhow.com/edible/vegetables/corn/northern-corn-leaf-blight-control.htm"
+        },
+        {
+            "crop": "Grape Black_rot",
+            "url": "https://www.gardeningknowhow.com/edible/fruits/grapes/black-rot-grape-treatment.htm"
+        },
+        {
+            "crop": "Grape Esca (Black Measles)",
+            "url": "https://plantix.net/en/library/plant-diseases/100140/esca"
+        },
+        {
+            "crop": "Grape Leaf blight",
+            "url": "https://www.gardeningknowhow.com/edible/fruits/grapes/treating-grapevine-problems.htm"
+        },
+        {
+            "crop": "Pepper bell Bacterial_spot",
+            "url": "https://www.gardeningknowhow.com/edible/vegetables/pepper/bacterial-leaf-spot-on-peppers.htm"
+        },
+        {
+            "crop": "Potato Early blight",
+            "url": "https://www.gardeningknowhow.com/edible/vegetables/potato/potato-early-blight-treatment.htm"
+        },
+        {
+            "crop": "Potato Late blight",
+            "url": "https://www2.ipm.ucanr.edu/agriculture/potato/late-blight/#:~:text=Late%20blight%20is%20controlled%20by,foliage%20each%20day%20is%20important."
+        },
+        {
+            "crop": "Rice Bacterial leaf blight",
+            "url": "http://www.knowledgebank.irri.org/decision-tools/rice-doctor/rice-doctor-fact-sheets/item/bacterial-blight"
+        },
+        {
+            "crop": "Rice Leaf smut",
+            "url": "https://www.gardeningknowhow.com/edible/grains/rice/how-to-treat-leaf-smut-of-rice.htm"
+        },
+        {
+            "crop": "RiceBrown spot",
+            "url": "http://www.knowledgebank.irri.org/training/fact-sheets/pest-management/diseases/item/brown-spot#:~:text=Use%20fungicides%20(e.g.%2C%20iprodione%2C,infection%20at%20the%20seedling%20stage."
+        },
+        {
+            "crop": "Tomato Bacterial spot",
+            "url": "https://www2.ipm.ucanr.edu/agriculture/tomato/Bacterial-spot/"
+        },
+        {
+            "crop": "Tomato Early blight",
+            "url": "https://www.planetnatural.com/pest-problem-solver/plant-disease/early-blight/"
+        },
+        {
+            "crop": "Tomato Late blight",
+            "url": "https://plantix.net/en/library/plant-diseases/100046/tomato-late-blight"
+        },
+        {
+            "crop": "Tomato Leaf Mold",
+            "url": "https://plantix.net/en/library/plant-diseases/100257/leaf-mold-of-tomato"
+        },
+        {
+            "crop": "Tomato Septoria leaf spot",
+            "url": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/pests-and-problems/diseases/fungal-spots/septoria-leaf-spot-of-tomato.aspx"
+        },
+        {
+            "crop": "Tomato Spider mites Two spotted spider mite",
+            "url": "https://ag.umass.edu/vegetable/fact-sheets/two-spotted-spider-mite"
+        },
+        {
+            "crop": "Tomato Target_Spot",
+            "url": "https://apps.lucidcentral.org/pppw_v10/text/web_full/entities/tomato_target_spot_163.htm "
+        },
+        {
+            "crop": "Tomato Tomato mosaic virus",
+            "url": "https://www.gardeningknowhow.com/edible/vegetables/tomato/managing-tomato-mosaic-virus.htm#:~:text=Destroy%20any%20seedlings%20that%20appear,lessen%20the%20chances%20of%20contamination"
+        },
+        {
+            "crop": "Tomato Tomato Yellow Leaf Curl Virus",
+            "url": "https://www.farmprogress.com/controlling-tomato-yellow-leaf-curl-virus"
+        },
+        {
+            "crop": "Wheat septoria",
+            "url": "https://www.agric.wa.gov.au/grains-research-development/managing-yellow-spot-and-septoria-nodorum-blotch-wheat"
+        },
+        {
+            "crop": "Wheat stripe rust",
+            "url": "https://agriculture.vic.gov.au/biosecurity/plant-diseases/grain-pulses-and-cereal-diseases/stripe-rust-of-wheat"
         }
     ]
 }

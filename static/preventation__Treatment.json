@@ -1,0 +1,340 @@
+{
+    "Treatment": [
+        {
+            "crop": "Apple scab",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li>Choose scab-resistant  varieties of apple or crabapple trees.</li>",
+                "<li>Rake up and discard any fallen leaves or fruit on a regular basis, and never leave fallen leaves or fruit on the ground over winter.</li> ",
+                "<li>Apple scab fungus overwinters on fallen leaves and fruit.</li>",
+                "</ul>"
+            ],
+            "url": "https://www.independenttree.com/apple-scab-identification-prevention-treatment-2/#:~:text=Remember%3A%20Apple%20scab%20is%20treated,spray%20is%20all%20you%20need."
+        },
+        {
+            "crop": "Apple Black rot",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Apple Cedar apple rust",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Corn Cercospora leaf spot",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Corn (maize) Common rust",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Corn Northern Leaf Blight",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Grape Black_rot",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Grape Esca (Black Measles)",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Grape Leaf blight",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Pepper bell Bacterial_spot",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Potato Early blight",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Potato Late blight",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Rice Bacterial leaf blight",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Rice Leaf smut",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "RiceBrown spot",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Tomato Bacterial spot",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Tomato Early blight",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Tomato Late blight",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Tomato Leaf Mold",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li>Avoid excessive nitrogen fertilization</li>",
+                "<li>keep the relative humidity below 85 and night temperature higher than outside temperatures</li>",
+                "<li>Remove and destroy(burn) all plants debris after the harvest</li>",
+                "<li>Use drip irrigation and avoid watering foilage</li>",
+                "</ul>"
+            ],
+            "url": "https://plantix.net/en/library/plant-diseases/100257/leaf-mold-of-tomato"
+        },
+        {
+            "crop": "Tomato Septoria leaf spot",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li>Remove infected leaves immediately, and be sure to wash your hands and pruners thoroughly before working with uninfected plants.</li>",
+                "<li>Begin spraying Fungicides as soon as the first symptoms appear</li>",
+                "<li>While chemical options are not ideal, they may be the only option for controlling advanced infections. One of the least toxic and most effective is chlorothalonil.</li>",
+                "<li>There's no evidence that this fungus is carried by seeds, but err on the safe side and don't save seed from infected plants.</li>",
+                "</ul>"
+            ],
+            "url": "https://www.missouribotanicalgarden.org/gardens-gardening/your-garden/help-for-the-home-gardener/advice-tips-resources/pests-and-problems/diseases/fungal-spots/septoria-leaf-spot-of-tomato.aspx"
+        },
+        {
+            "crop": "Tomato Spider mites Two spotted spider mite",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li>Avoid weedy fields and do not plant eggplant adjacent to legume forage crops.</li>",
+                "<li>Avoid early season, broad-spectrum insecticide applications for other pests.</li>",
+                "<li>Do not over-fertilize</li>",
+                "<li>Overhead irrigation or prolonged periods of rain can help reduce populations.</li>",
+                "</ul>"
+            ],
+            "url": "https://ag.umass.edu/vegetable/fact-sheets/two-spotted-spider-mite"
+        },
+        {
+            "crop": "Tomato Target_Spot",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Tomato Tomato mosaic virus",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li>Destroy any seedlings that appear stunted or distorted and then decontaminate tools and hands. </li>",
+                "<li>Keep the area around the tomatoes weeded and free of plant detritus to minimize areas the disease can harbor. </li>",
+                "<li>Control insects as well to lessen the chances of contamination.</li>",
+                "<li>If you spot the disease in your garden, you should immediately dig up and burn infected plants. </li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Tomato Tomato Yellow Leaf Curl Virus",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "<li></li>",
+                "</ul>"
+            ],
+            "url": ""
+        },
+        {
+            "crop": "Wheat septoria",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li>Use crop rotation to reduce risk from these stubble-borne diseases.</li>",
+                "<li>Avoid very susceptible or susceptible varieties. Favour moderately resistant-moderately susceptible varieties. See the latest wheat variety information for disease ratings.</li>",
+                "<li>Ensure crop has adequate nutrition (particularly nitrogen and potassium).</li>",
+                "</ul>"
+            ],
+            "url": "https://www.agric.wa.gov.au/grains-research-development/managing-yellow-spot-and-septoria-nodorum-blotch-wheat"
+        },
+        {
+            "crop": "Wheat stripe rust",
+            "Treatment": [
+                "Treatment: <br>",
+                "<ul>",
+                "<li>Remove volunteer wheat plants (the green bridge) that will support stripe rust inoculum in the 6 weeks prior to sowing</li>",
+                "<li>Avoid growing Susceptible (S) and Very Susceptible (VS) varieties by selecting more resistant varieties</li>",
+                "<li>Use a seed or fertiliser treatment to suppress early infection</li>",
+                "<li>Monitor crops during the growing season and apply a foliar fungicide early in the epidemic, if required. </li>",
+                "</ul>"
+            ],
+            "url": "https://agriculture.vic.gov.au/biosecurity/plant-diseases/grain-pulses-and-cereal-diseases/stripe-rust-of-wheat"
+        }
+    ]
+}
