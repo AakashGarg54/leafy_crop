@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 from flask import Flask, render_template, request, jsonify
 from chat import get_response
 #from tensorflow.keras.preprocessing import image
-# from flask import Flask, redirect, url_for, request, render_template
+from flask import Flask, redirect, url_for, request, render_template
 #import tensorflow as tf
 from tflite_runtime.interpreter import Interpreter
 import matplotlib.image as mpimg
@@ -117,20 +117,20 @@ def login():
 
 
 def getOTPapi(number, email):
-    # url = "https://www.fast2sms.com/dev/bulkV2"
+    url = "https://www.fast2sms.com/dev/bulkV2"
 
-    # message = str(generated_otp) + " is your Leafycrop OTP. Do not share it with anyone."
-    # payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
+    message = str(generated_otp) + " is your Leafycrop OTP. Do not share it with anyone."
+    payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
 
-    # headers = {
-    #     'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
-    #     'Content-Type': "application/x-www-form-urlencoded",
-    #     'Cache-Control': "no-cache",
-    # }
+    headers = {
+        'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
+        'Content-Type': "application/x-www-form-urlencoded",
+        'Cache-Control': "no-cache",
+    }
 
-    # response = requests.request("POST", url, data=payload, headers=headers)
+    response = requests.request("POST", url, data=payload, headers=headers)
 
-    # print(response.text)
+    print(response.text)
 
     msg = Message("Your OTP for Leafy Crop Login", sender="lefycrop.otp@gmail.com",
                   recipients=[email])
@@ -230,4 +230,4 @@ def contact():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
