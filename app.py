@@ -117,20 +117,20 @@ def login():
 
 
 def getOTPapi(number, email):
-    url = "https://www.fast2sms.com/dev/bulkV2"
+    # url = "https://www.fast2sms.com/dev/bulkV2"
 
-    message = str(generated_otp) + " is your Leafycrop OTP. Do not share it with anyone."
-    payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
+    # message = str(generated_otp) + " is your Leafycrop OTP. Do not share it with anyone."
+    # payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
 
-    headers = {
-        'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
-        'Content-Type': "application/x-www-form-urlencoded",
-        'Cache-Control': "no-cache",
-    }
+    # headers = {
+    #     'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
+    #     'Content-Type': "application/x-www-form-urlencoded",
+    #     'Cache-Control': "no-cache",
+    # }
 
-    response = requests.request("POST", url, data=payload, headers=headers)
+    # response = requests.request("POST", url, data=payload, headers=headers)
 
-    print(response.text)
+    # print(response.text)
 
     msg = Message("Your OTP for Leafy Crop Login", sender="lefycrop.otp@gmail.com",
                   recipients=[email])
