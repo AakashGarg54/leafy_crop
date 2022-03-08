@@ -132,7 +132,7 @@ def getOTPapi(number, email):
 
     # print(response.text)
 
-    msg = Message("Your OTP for Leafy Crop Login", sender="boyeclipse2001@gmail.com",
+    msg = Message("Your OTP for Leafy Crop Login", sender="lefycrop.otp@gmail.com",
                   recipients=[email])
 
     msg.body = f"Your OTP is {str(generated_otp)}"
