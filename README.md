@@ -26,3 +26,9 @@ Suse Linux Enterprise 12.
 Can run natively on linux.
 -----------------------------
 source venv/bin/activate
+
+-----------------------------
+
+To fix the less secure error inside the application follow :- https://stackoverflow.com/questions/54657006/smtpauthenticationerror-5-7-14-please-log-n5-7-14-in-via-your-web-browser
+
+-----------------------------
