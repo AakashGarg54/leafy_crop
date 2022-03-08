@@ -52,8 +52,8 @@ print('Model loaded. Check http://127.0.0.1:5000/')
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'boyeclipse2001@gmail.com'  #'lefycrop.otp@gmail.com'
-app.config['MAIL_PASSWORD'] = 'Vemagiricao123'
+app.config['MAIL_USERNAME'] = 'lefycrop.otp@gmail.com'
+app.config['MAIL_PASSWORD'] = 'leafycrop123'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
