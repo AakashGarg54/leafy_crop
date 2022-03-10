@@ -79,6 +79,7 @@ $(document).ready(function () {
                 $("#preventation__print").html(preventation__treatment);
                 $("#preventation__result").html(preventation__treatment);
                 $("#preventation__url").attr("href", value.url);
+                $("#preventation__url_mail").html(value.url);
                 console.log("True");
               }
             });

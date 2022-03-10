@@ -112,7 +112,7 @@ def login():
         getOTPapi(number, email)
         # print(number)
     else:
-        return render_template("home.html")
+        return render_template("home.html", test_url="https://www.google.com/", test="Hye")
     return render_template("home.html")
 
 
@@ -157,10 +157,13 @@ def index():
     if request.method == "POST":
         result = request.form["result"]
         preventation__result = request.form["preventation__result"]
-        # preventation__url = request.form["preventation__url"]
+        preventation__url_mail = request.form["preventation__url_mail"]
         result_message = Message(f"Your prediction result", sender="lefycrop.otp@gmail.com",
                                  recipients=[email])
-        result_message.body = f"{result}\n\nPreventation : {preventation__result}\n\nMore Info ="
+        result_message.body = f"{result}\n\nPreventation : {preventation__result}\n\nMore Info ={preventation__url_mail}"
+
+        result_message.html = render_template(
+            "result.html", result=result, preventation__result=preventation__result, preventation__url_mail=preventation__url_mail)
 
         mail.send(result_message)
     return render_template('index.html')
