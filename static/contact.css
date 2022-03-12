@@ -2,6 +2,7 @@
   width: 36vw;
   padding-bottom: 1px;
   padding-top: 25px;
+  
 }
 
 .contact_heading1 {
@@ -130,12 +131,4 @@ textarea {
   transform: translateY(1px);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
   background: linear-gradient(93.12deg, #20bf55 0.52%, #01baef 100%);
-}
-
-@media (max-width: 768px) {
-  .submit-btn {
-    width: 100%;
-    float: none;
-    text-align: center;
-  }
 }
