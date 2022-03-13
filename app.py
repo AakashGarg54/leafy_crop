@@ -112,34 +112,34 @@ def login():
         getOTPapi(number, email)
         # print(number)
     else:
-        return render_template("home.html", test_url="https://www.google.com/", test="Hye")
+        return render_template("home.html")
     return render_template("home.html")
 
 
 def getOTPapi(number, email):
-    url = "https://www.fast2sms.com/dev/bulkV2"
+    try:
+        url = "https://www.fast2sms.com/dev/bulkV2"
 
-    message = str(generated_otp) + \
-        " is your Leafycrop OTP. Do not share it with anyone."
-    payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
+        message = str(generated_otp) + \
+            " is your Leafycrop OTP. Do not share it with anyone."
+        payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
 
-    headers = {
-        'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
-        'Content-Type': "application/x-www-form-urlencoded",
-        'Cache-Control': "no-cache",
-    }
+        headers = {
+            'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
+            'Content-Type': "application/x-www-form-urlencoded",
+            'Cache-Control': "no-cache",
+        }
 
-    response = requests.request("POST", url, data=payload, headers=headers)
+        response = requests.request("POST", url, data=payload, headers=headers)
 
-    print(response.text)
+        send_OTP = Message("Your OTP for Leafy Crop Login", sender="lefycrop.otp@gmail.com",
+                           recipients=[email])
 
-    msg = Message("Your OTP for Leafy Crop Login", sender="lefycrop.otp@gmail.com",
-                  recipients=[email])
+        send_OTP.html = render_template('otp_send.html', otp=generated_otp)
 
-    msg.body = f"Your OTP is {str(generated_otp)}"
-    msg.html = render_template('otp_send.html', otp=generated_otp)
-
-    mail.send(msg)
+        mail.send(send_OTP)
+    except:
+        return render_template('error404.html', error="Cannot able to send the OTP, Try '123456' as OTP to login")
 
 
 @app.route("/validate_otp", methods=["GET", "POST"])
@@ -158,14 +158,17 @@ def index():
         result = request.form["result"]
         preventation__result = request.form["preventation__result"]
         preventation__url_mail = request.form["preventation__url_mail"]
-        result_message = Message(f"Your prediction result", sender="lefycrop.otp@gmail.com",
-                                 recipients=[email])
-        result_message.body = f"{result}\n\nPreventation : {preventation__result}\n\nMore Info ={preventation__url_mail}"
+        try:
+            result_message = Message(f"Your prediction result", sender="lefycrop.otp@gmail.com",
+                                     recipients=[email])
 
-        result_message.html = render_template(
-            "result.html", result=result, preventation__result=preventation__result, preventation__url_mail=preventation__url_mail)
+            result_message.html = render_template(
+                "result.html", result=result, preventation__result=preventation__result, preventation__url_mail=preventation__url_mail)
 
-        mail.send(result_message)
+            mail.send(result_message)
+        except:
+            return render_template('error404.html', error="Please start again from the OTP authentication")
+
     return render_template('index.html')
 
 

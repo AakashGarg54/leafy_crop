@@ -23,6 +23,10 @@ $(document).ready(function () {
     }
   }
 
+  $(".btn-getotp").click(function () {
+    $(".send-message").html("OTP send");
+  });
+
   //$(".btn-login").click(function validate_OTP() {
   //$(".after-otp").show(2000)
   //});

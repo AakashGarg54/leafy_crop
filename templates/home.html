@@ -31,9 +31,10 @@
                 </div>
             </div>
             <div class="col-xs-12">
-                <button type="submit" class="btn-lrg submit-btn btn-responsive submit-btn-login"
+                <button type="submit" class="btn-lrg submit-btn btn-responsive submit-btn-login btn-getotp"
                     value="Send Message">Get OTP</button>
             </div>
+            <p class="text-response text-light send-message">{{send}}</p>
         </form>
         <form action="/validate_otp" method="post">
             <div class="col-xs-12">
