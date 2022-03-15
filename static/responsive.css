@@ -65,6 +65,19 @@
     margin-left: 25px;
   }
 
+  .otp-selection {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .form-check-inline {
+    margin-top: 5vw;
+  }
+
   .text-phnno,
   .text-otp {
     width: 70vw;
