@@ -27,9 +27,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 app = Flask(__name__)
 try:
     nltk.data.find('tokenizers/punkt')
-    print("NLTK FOUND")
 except LookupError:
-    print("NLTK NOT FOUND")
     nltk.download('punkt')
 # Model saved with Keras model.save()
 # update3
@@ -57,6 +55,11 @@ app.config['MAIL_PASSWORD'] = 'leafycrop123'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
+
+
+global email
+
+email = ""
 
 
 def generateOTP():
@@ -105,41 +108,52 @@ def model_predict(img_path):
 
 @app.route('/', methods=["GET", "POST"])  # Login - with OTP auth
 def login():
+    return render_template("login.html")
+
+
+@app.route('/emailotp', methods=["GET", "POST"])
+def send_OTP_email():
     if request.method == "POST":
-        number = request.form["number"]
-        global email
         email = request.form["email"]
-        getOTPapi(number, email)
-        # print(number)
+        try:
+            send_OTP = Message("Your OTP for Leafy Crop Login", sender="lefycrop.otp@gmail.com",
+                               recipients=[email])
+            send_OTP.html = render_template('otp_send.html', otp=generated_otp)
+            mail.send(send_OTP)
+            return render_template("login.html", send="OTP SEND")
+        except:
+            return render_template('error404.html', error="Cannot able to send the OTP, Try '123456' as OTP to login")
     else:
-        return render_template("home.html")
-    return render_template("home.html")
+        return render_template("login.html")
 
 
-def getOTPapi(number, email):
-    try:
-        url = "https://www.fast2sms.com/dev/bulkV2"
+@app.route('/phnotp', methods=["GET", "POST"])
+def send_OTP_phno():
+    if request.method == "POST":
+        global number
+        number = request.form["number"]
+        try:
+            url = "https://www.fast2sms.com/dev/bulkV2"
 
-        message = str(generated_otp) + \
-            " is your Leafycrop OTP. Do not share it with anyone."
-        payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
+            message = str(generated_otp) + \
+                " is your Leafycrop OTP. Do not share it with anyone."
+            payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
 
-        headers = {
-            'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
-            'Content-Type': "application/x-www-form-urlencoded",
-            'Cache-Control': "no-cache",
-        }
+            headers = {
+                'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
+                'Content-Type': "application/x-www-form-urlencoded",
+                'Cache-Control': "no-cache",
+            }
 
-        response = requests.request("POST", url, data=payload, headers=headers)
+            response = requests.request(
+                "POST", url, data=payload, headers=headers)
 
-        send_OTP = Message("Your OTP for Leafy Crop Login", sender="lefycrop.otp@gmail.com",
-                           recipients=[email])
+            return render_template("login.html", send="OTP SEND")
 
-        send_OTP.html = render_template('otp_send.html', otp=generated_otp)
-
-        mail.send(send_OTP)
-    except:
-        return render_template('error404.html', error="Cannot able to send the OTP, Try '123456' as OTP to login")
+        except:
+            return render_template('error404.html', error="Cannot able to send the OTP, Try '123456' as OTP to login")
+    else:
+        return render_template("login.html")
 
 
 @app.route("/validate_otp", methods=["GET", "POST"])
@@ -149,7 +163,7 @@ def validate_otp():  # Validate OTP and LOGIN to index.html
         if int(generated_otp) == int(otp) or int(otp) == 123456:
             return redirect(url_for('index'))
         else:
-            return render_template("home.html", error="Please enter a valid OTP")
+            return render_template("login.html", error="Please enter a valid OTP")
 
 
 @app.route('/index', methods=["GET", "POST"])
@@ -158,16 +172,29 @@ def index():
         result = request.form["result"]
         preventation__result = request.form["preventation__result"]
         preventation__url_mail = request.form["preventation__url_mail"]
-        try:
-            result_message = Message(f"Your prediction result", sender="lefycrop.otp@gmail.com",
-                                     recipients=[email])
+
+        if email != "":
+            result_message = Message(
+                f"Your prediction result", sender="lefycrop.otp@gmail.com", recipients=[email])
 
             result_message.html = render_template(
                 "result.html", result=result, preventation__result=preventation__result, preventation__url_mail=preventation__url_mail)
 
             mail.send(result_message)
-        except:
-            return render_template('error404.html', error="Please start again from the OTP authentication")
+
+        else:
+            url = "https://www.fast2sms.com/dev/bulkV2"
+            message = f"{result}\n\nClick here for more info :-  {preventation__url_mail}"
+
+            payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
+            headers = {
+                'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
+                'Content-Type': "application/x-www-form-urlencoded",
+                'Cache-Control': "no-cache",
+            }
+
+            response = requests.request(
+                "POST", url, data=payload, headers=headers)
 
     return render_template('index.html')
 

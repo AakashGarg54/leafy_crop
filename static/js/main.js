@@ -23,8 +23,20 @@ $(document).ready(function () {
     }
   }
 
-  $(".btn-getotp").click(function () {
-    $(".send-message").html("OTP send");
+  $(".email-radio").click(function () {
+    $(".email-radio").hide();
+    $(".phone-radio").hide();
+    $(".login-form-phno").hide();
+    $(".login-form-email").show();
+    $(".form-check-inline").hide();
+  });
+
+  $(".phone-radio").click(function () {
+    $(".email-radio").hide();
+    $(".phone-radio").hide();
+    $(".login-form-phno").show();
+    $(".login-form-email").hide();
+    $(".form-check-inline").hide();
   });
 
   //$(".btn-login").click(function validate_OTP() {
@@ -61,14 +73,13 @@ $(document).ready(function () {
         $(".newl").hide();
         $("#result__print").html("Result:  " + data);
         $(".result").val("Result:  " + data);
-        $(".before_predication").hide(1500);
-        $(".after_predication").show(1500);
+        $(".before_predication").hide();
+        $(".after_predication").show();
         $.ajax({
           url: "static/preventation.json",
           success: function (preventation_json) {
             $(preventation_json.Treatment).each((index, value) => {
-              if (value.crop === data) {
-                const preventation__treatment = `
+              const preventation__treatment = `
                 Generic Treatment: <br>
                 <br>
                 <ol>
@@ -80,11 +91,20 @@ $(document).ready(function () {
                 </ol>
                 `;
 
+              if (value.crop === data) {
                 $("#preventation__print").html(preventation__treatment);
                 $("#preventation__result").html(preventation__treatment);
                 $("#preventation__url").attr("href", value.url);
                 $("#preventation__url_mail").html(value.url);
-                console.log("True");
+                return false;
+              } else {
+                const url =
+                  "https://www.bbg.org/gardening/article/disease_prevention";
+
+                $("#preventation__print").html(preventation__treatment);
+                $("#preventation__result").html(preventation__treatment);
+                $("#preventation__url").attr("href", url);
+                $("#preventation__url_mail").html(url);
               }
             });
           },
@@ -94,8 +114,8 @@ $(document).ready(function () {
   });
 
   $("#back").click(function () {
-    $(".before_predication").show(1000);
-    $(".after_predication").hide(1000);
+    $(".before_predication").show();
+    $(".after_predication").hide();
   });
 });
 

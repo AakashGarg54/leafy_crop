@@ -71,6 +71,7 @@
   font-style: oblique;
   width: 38vw;
   margin-top: 20px;
+  text-align: justify;
 }
 /* 
 .text-otp {
@@ -176,4 +177,15 @@
 
 .info img {
   margin-top: 50px;
+}
+
+.login-form-email,
+.login-form-phno {
+  display: none;
+}
+
+.login-label {
+  font-size: 1.25em !important;
+  margin: 2vh 0 0 1vw;
+  color: white !important;
 }

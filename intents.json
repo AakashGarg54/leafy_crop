@@ -108,9 +108,9 @@
                         ],
                         "responses": [
                                 "Yes",
-                                "Yes,Let's do it!",
+                                "Yes, Let's do it!",
                                 "Do you want a one night stand at my place?",
-                                "Let's have a baby Flask `uwu`",
+                                "Let's have a baby 'uwu'",
                                 "Our descendents will be beautiful! :)",
                                 "Our baby name will be Flason 'uwu'"
                         ],
@@ -186,7 +186,7 @@
                                 "can you list all diseases"
                         ],
                         "responses": [
-                                "Our system can detect following diseases: <ol><li>Apple scab</li><li>Apple Black rot</li><li>Apple Cedar apple rust</li><li>Apple healthy</li><li>Corn Cercospora leaf spot</li><li>Corn Common rust</li><li>Corn healthy</li><li>Corn Northern Leaf Blight</li><li>Grape Black_rot</li><li>Grape Esca </li><li>Grape healthy</li><li>Grape Leaf blight</li><li>Pepper bell Bacterial_spot</li><li>Pepper bell healthy</li><li>Potato Early blight</li><li>Potato healthy</li><li>Potato Late blight</li><li>Rice Bacterial leaf blight</li><li>Rice Leaf smut</li><li>RiceBrown spot</li><li>Tomato Bacterial spot</li><li>Tomato Early blight</li><li>Tomato healthy</li><li>Tomato Late blight</li><li>Tomato Leaf Mold</li><li>Tomato Septoria leaf spot</li><li>Tomato Spider mites Two spotted spider mite</li><li>Tomato Target_Spot</li><li>Tomato Tomato mosaic virus</li><li>Tomato Tomato Yellow Leaf Curl Virus</li><li>Wheat Healthy</li><li>Wheat septoria</li><li>Wheat stripe rust</li></ol>"
+                                "Our system can detect following diseases: <ol><li>Apple scab</li><li>Apple Black rot</li><li>Apple Cedar apple rust</li><li>Corn Cercospora leaf spot</li><li>Corn Common rust</li><li>Corn Northern Leaf Blight</li><li>Grape Black_rot</li><li>Grape Esca </li><li>Grape Leaf blight</li><li>Pepper bell Bacterial_spot</li><li>Potato Early blight</li><li>Potato Late blight</li><li>Rice Bacterial leaf blight</li><li>Rice Leaf smut</li><li>RiceBrown spot</li><li>Tomato Bacterial spot</li><li>Tomato Early blight</li><li>Tomato Late blight</li><li>Tomato Leaf Mold</li><li>Tomato Septoria leaf spot</li><li>Tomato Spider mites Two spotted spider mite</li><li>Tomato Target_Spot</li><li>Tomato Tomato mosaic virus</li><li>Tomato Tomato Yellow Leaf Curl Virus</li><li>Wheat septoria</li><li>Wheat stripe rust</li></ol>"
                         ],
                         "context": [
                                 ""

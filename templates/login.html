@@ -7,7 +7,7 @@
         <p class="text-light text-info">Crop diseases are a major threat to food security, but their rapid
             identification remains
             difficult in many parts of the world due to the lack of the necessary infrastructure. This project aims to
-            build a deep learning model and prepare the model for deployment and deploy the model on AWS platform
+            build a deep learning model and prepare the model for deployment and deploy the model on onrender platform
             allowing farmers to easily make use of latest technologies to diagnose crop disease.
         </p>
         <img class="img-leaf img-thumbnail" src="/static/Wireframe-Example.png"
@@ -16,18 +16,19 @@
     <div class="vertical"></div>
 
     <div class="row input-container login">
-        <form action="/" method="post">
-            <div class="col-xs-12">
-                <div class="styled-input wide input-responsive input-responsive-login">
-                    <input type="number" maxlength="10" name="number" required="required"
-                        data-error="Phone number is required.">
-                    <label>Enter your phone number</label>
-                </div>
-            </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input email-radio" type="radio">
+            <label class="form-check-label login-label">Email Id</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input phone-radio" type="radio">
+            <label class="form-check-label login-label">Phone Number</label>
+        </div>
+        <form action="/emailotp" method="post" class="login-form-email">
             <div class="col-xs-12">
                 <div class="styled-input wide input-responsive input-responsive-login">
                     <input type="text" name="email" data-error="Valid email is required." required />
-                    <label>Enter your email ID (if any)</label>
+                    <label>Enter your email ID</label>
                 </div>
             </div>
             <div class="col-xs-12">
@@ -36,6 +37,20 @@
             </div>
             <p class="text-response text-light send-message">{{send}}</p>
         </form>
+        <form action="/phnotp" method="post" class="login-form-phno">
+            <div class="col-xs-12">
+                <div class="styled-input wide input-responsive input-responsive-login">
+                    <input type="number" maxlength="10" name="number" required="required"
+                        data-error="Phone number is required.">
+                    <label>Enter your phone number</label>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <button type="submit" class="btn-lrg submit-btn btn-responsive submit-btn-login btn-getotp"
+                    value="Send Message">Get OTP</button>
+            </div>
+        </form>
+        <p class="text-response text-light send-message">{{send}}</p>
         <form action="/validate_otp" method="post">
             <div class="col-xs-12">
                 <div class="styled-input wide input-responsive input-responsive-login">
