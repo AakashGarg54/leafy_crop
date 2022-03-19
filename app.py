@@ -165,12 +165,12 @@ def validate_otp():  # Validate OTP and LOGIN to index.html
 
 @app.route('/index', methods=["GET", "POST"])
 def index():
-    if request.method == "POST":
-        result = request.form["result"]
-        preventation__result = request.form["preventation__result"]
-        preventation__url_mail = request.form["preventation__url_mail"]
 
-        try:
+    try:
+        if request.method == "POST":
+            result = request.form["result"]
+            preventation__result = request.form["preventation__result"]
+            preventation__url_mail = request.form["preventation__url_mail"]
             result_message = Message(
                 f"Your prediction result", sender="lefycrop.otp@gmail.com", recipients=[email])
 
@@ -179,21 +179,21 @@ def index():
 
             mail.send(result_message)
 
-        except NameError:
-            url = "https://www.fast2sms.com/dev/bulkV2"
-            message = f"{result}\n\nClick here for more info :-  {preventation__url_mail}"
+    except NameError:
+        url = "https://www.fast2sms.com/dev/bulkV2"
+        message = f"{result}\n\nClick here for more info :-  {preventation__url_mail}"
 
-            payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
-            headers = {
-                'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
-                'Content-Type': "application/x-www-form-urlencoded",
-                'Cache-Control': "no-cache",
-            }
+        payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
+        headers = {
+            'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
+            'Content-Type': "application/x-www-form-urlencoded",
+            'Cache-Control': "no-cache",
+        }
 
-            response = requests.request(
-                "POST", url, data=payload, headers=headers)
-        else:
-            return render_template('error404.html', error="Cannot able to send the result please try again from the authorization")
+        response = requests.request(
+            "POST", url, data=payload, headers=headers)
+    else:
+        return render_template('error404.html', error="Cannot able to send the result please try again from the authorization")
     return render_template("index.html")
 
 
