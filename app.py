@@ -130,20 +130,20 @@ def send_OTP_phno():
         global number
         number = request.form["number"]
         try:
-            # url = "https://www.fast2sms.com/dev/bulkV2"
+            url = "https://www.fast2sms.com/dev/bulkV2"
 
-            # message = str(generated_otp) + \
-            #     " is your Leafycrop OTP. Do not share it with anyone."
-            # payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
+            message = str(generated_otp) + \
+                " is your Leafycrop OTP. Do not share it with anyone."
+            payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
 
-            # headers = {
-            #     'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
-            #     'Content-Type': "application/x-www-form-urlencoded",
-            #     'Cache-Control': "no-cache",
-            # }
+            headers = {
+                'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
+                'Content-Type': "application/x-www-form-urlencoded",
+                'Cache-Control': "no-cache",
+            }
 
-            # response = requests.request(
-            #     "POST", url, data=payload, headers=headers)
+            response = requests.request(
+                "POST", url, data=payload, headers=headers)
 
             return render_template("login.html", send="OTP SEND")
 
@@ -171,11 +171,9 @@ def index():
         preventation__url_mail = request.form["preventation__url_mail"]
 
         try:
-            result_message = Message(
-                f"Your prediction result", sender="lefycrop.otp@gmail.com", recipients=[email])
+            result_message = Message(f"Your prediction result", sender="lefycrop.otp@gmail.com", recipients=[email])
 
-            result_message.html = render_template(
-                "result.html", result=result, preventation__result=preventation__result, preventation__url_mail=preventation__url_mail)
+            result_message.html = render_template("result.html", result=result, preventation__result=preventation__result, preventation__url_mail=preventation__url_mail)
 
             mail.send(result_message)
 
