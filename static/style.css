@@ -162,3 +162,8 @@ a {
 .textimg {
   color: #aeb7b5;
 }
+
+.otp-selection {
+  width: 30vw;
+  /* margin-left: 16vw; */
+}

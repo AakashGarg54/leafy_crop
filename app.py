@@ -57,11 +57,6 @@ app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 
 
-global email
-
-email = ""
-
-
 def generateOTP():
     return random.randint(100000, 999999)  # OTP Generator
 
@@ -114,6 +109,8 @@ def login():
 @app.route('/emailotp', methods=["GET", "POST"])
 def send_OTP_email():
     if request.method == "POST":
+        global email
+        email = ""
         email = request.form["email"]
         try:
             send_OTP = Message("Your OTP for Leafy Crop Login", sender="lefycrop.otp@gmail.com",
@@ -173,7 +170,7 @@ def index():
         preventation__result = request.form["preventation__result"]
         preventation__url_mail = request.form["preventation__url_mail"]
 
-        if email != "":
+        try:
             result_message = Message(
                 f"Your prediction result", sender="lefycrop.otp@gmail.com", recipients=[email])
 
@@ -182,7 +179,7 @@ def index():
 
             mail.send(result_message)
 
-        else:
+        except NameError:
             url = "https://www.fast2sms.com/dev/bulkV2"
             message = f"{result}\n\nClick here for more info :-  {preventation__url_mail}"
 
@@ -195,8 +192,9 @@ def index():
 
             response = requests.request(
                 "POST", url, data=payload, headers=headers)
-
-    return render_template('index.html')
+        else:
+            return render_template('error404.html', error="Cannot able to send the result please try again from the authorization")
+    return render_template("index.html")
 
 
 @app.route('/predict', methods=['GET', 'POST'])
