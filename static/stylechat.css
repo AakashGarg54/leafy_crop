@@ -17,6 +17,20 @@
   bottom: 49px;
   right: 30px;
 }
+.chatbox__messages::-webkit-scrollbar-track
+{
+  background:#d9d6d6;
+}
+.chatbox__messages::-webkit-scrollbar-thumb
+{
+  background:#aba8a8;
+  border-radius: 200px;
+}
+.chatbox__messages::-webkit-scrollbar-thumb:hover
+{
+  background:#a1a1a1;
+  border-radius: 200px;
+}
 .click {
   font-size: 15px;
 }
