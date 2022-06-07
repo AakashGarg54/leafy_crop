@@ -184,28 +184,6 @@ def index():
 
         except NameError:
 
-            # url = "https://www.fast2sms.com/dev/bulkV2"
-
-            # querystring = {
-            #     "authorization": "ZcnzxpgJhSDVUGjIYBavCX15byL3OekTi0droFK9WN8mfR4sA7v1EUSmDzKVFqhH3Gneu8QyXCWLwl07",
-            #     "message": f"{result}\n\nClick here for more info :-  {preventation__url_mail}",
-            #     "language": "english",
-            #     "sender_id": "TXTIND",
-            #     "route": "v3",
-            #     "numbers": {number},
-            # }
-
-            # headers = {
-            #     'cache-control': "no-cache"
-            # }
-
-            # response = requests.request(
-            #     "GET", url, headers=headers, params=querystring)
-
-            # print(response.text)
-
-            # # return render_template("login.html")
-
             url = "https://www.fast2sms.com/dev/bulkV2"
 
             message = f"{result}\n\nClick here for more info :-  {preventation__url_mail}"
@@ -220,6 +198,8 @@ def index():
 
             response = requests.request(
                 "POST", url, data=payload, headers=headers)
+
+            print(response.text)
 
             if (response.json()["return"]):
                 return render_template("index.html")
