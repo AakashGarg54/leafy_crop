@@ -50,7 +50,7 @@ print('Model loaded. Check http://127.0.0.1:5000/')
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'lefycrop.otp@gmail.com'
-app.config['MAIL_PASSWORD'] = 'leafycrop123'
+app.config['MAIL_PASSWORD'] = 'pwqakwnediyzerfm'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -100,7 +100,7 @@ def model_predict(img_path):
     # return y_pred
 
 
-@app.route('/', methods=["GET", "POST"])  # Login - with OTP auth
+@app.route('/', methods=["GET", "POST"])
 def login():
     return render_template("login.html")
 
@@ -117,8 +117,8 @@ def send_OTP_email():
             send_OTP.html = render_template('otp_send.html', otp=generated_otp)
             mail.send(send_OTP)
             return render_template("login.html", send="OTP SEND")
-        except:
-            return render_template('error404.html', error="Cannot able to send the OTP, Try '123456' as OTP to login")
+        except Exception as e:
+            return render_template('error404.html', error=e)
     else:
         return render_template("login.html")
 
