@@ -1,6 +1,6 @@
 from __future__ import division, print_function
-import nltk
 import requests
+import nltk
 import random
 from flask import *
 from flask_mail import *
@@ -8,9 +8,9 @@ from gevent.pywsgi import WSGIServer
 from werkzeug.utils import secure_filename
 from flask import Flask, render_template, request, jsonify
 from chat import get_response
-#from tensorflow.keras.preprocessing import image
+# from tensorflow.keras.preprocessing import image
 from flask import Flask, redirect, url_for, request, render_template
-#import tensorflow as tf
+# import tensorflow as tf
 from tflite_runtime.interpreter import Interpreter
 import matplotlib.image as mpimg
 # coding=utf-8
@@ -21,7 +21,6 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 # New imports
 # Keras
-
 # Flask utils
 # Define a flask app
 app = Flask(__name__)
@@ -35,14 +34,14 @@ MODEL_PATH = 'MobileNet_v2.h5'
 
 # Load your trained model
 # update3
-#model = load_model(MODEL_PATH)
+# model = load_model(MODEL_PATH)
 # Necessary
 # print('Model loaded. Start serving...')
 
 # You can also use pretrained model from Keras
 # Check https://keras.io/applications/
-#from keras.applications.resnet50 import ResNet50
-#model = ResNet50(weights='imagenet')
+# from keras.applications.resnet50 import ResNet50
+# model = ResNet50(weights='imagenet')
 # model.save('')
 print('Model loaded. Check http://127.0.0.1:5000/')
 
@@ -84,10 +83,10 @@ def model_predict(img_path):
     """
     import cv2
     x = cv2.resize(x, (150,150))
-    #print(x.shape())"""
-    #y_pred=model.predict_classes(np.expand_dims(x, axis=0))
+    # print(x.shape())"""
+    # y_pred=model.predict_classes(np.expand_dims(x, axis=0))
     # update3
-    #y_pred = np.argmax(model.predict(np.expand_dims(x, axis=0),batch_size=8), axis=-1)
+    # y_pred = np.argmax(model.predict(np.expand_dims(x, axis=0),batch_size=8), axis=-1)
     interpreter = Interpreter(model_path="model.tflite")
     interpreter.allocate_tensors()
     input_details = interpreter.get_input_details()
@@ -134,10 +133,11 @@ def send_OTP_phno():
 
             message = str(generated_otp) + \
                 " is your Leafycrop OTP. Do not share it with anyone."
-            payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
+
+            payload = f"sender_id=FastSM&message={message}&route=v3&numbers={number}"
 
             headers = {
-                'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
+                'authorization': "ZcnzxpgJhSDVUGjIYBavCX15byL3OekTi0droFK9WN8mfR4sA7v1EUSmDzKVFqhH3Gneu8QyXCWLwl07",
                 'Content-Type': "application/x-www-form-urlencoded",
                 'Cache-Control': "no-cache",
             }
@@ -145,7 +145,10 @@ def send_OTP_phno():
             response = requests.request(
                 "POST", url, data=payload, headers=headers)
 
-            return render_template("login.html", send="OTP SEND")
+            if (response.json()["return"]):
+                return render_template("login.html", send=response.json()["message"])
+            else:
+                return render_template('error404.html', error=response.json()["message"] + ", Try '123456' as OTP to login")
 
         except:
             return render_template('error404.html', error="Cannot able to send the OTP, Try '123456' as OTP to login")
@@ -171,19 +174,46 @@ def index():
         preventation__url_mail = request.form["preventation__url_mail"]
 
         try:
-            result_message = Message(f"Your prediction result", sender="lefycrop.otp@gmail.com", recipients=[email])
+            result_message = Message(
+                f"Your prediction result", sender="lefycrop.otp@gmail.com", recipients=[email])
 
-            result_message.html = render_template("result.html", result=result, preventation__result=preventation__result, preventation__url_mail=preventation__url_mail)
+            result_message.html = render_template(
+                "result.html", result=result, preventation__result=preventation__result, preventation__url_mail=preventation__url_mail)
 
             mail.send(result_message)
 
         except NameError:
+
+            # url = "https://www.fast2sms.com/dev/bulkV2"
+
+            # querystring = {
+            #     "authorization": "ZcnzxpgJhSDVUGjIYBavCX15byL3OekTi0droFK9WN8mfR4sA7v1EUSmDzKVFqhH3Gneu8QyXCWLwl07",
+            #     "message": f"{result}\n\nClick here for more info :-  {preventation__url_mail}",
+            #     "language": "english",
+            #     "sender_id": "TXTIND",
+            #     "route": "v3",
+            #     "numbers": {number},
+            # }
+
+            # headers = {
+            #     'cache-control': "no-cache"
+            # }
+
+            # response = requests.request(
+            #     "GET", url, headers=headers, params=querystring)
+
+            # print(response.text)
+
+            # # return render_template("login.html")
+
             url = "https://www.fast2sms.com/dev/bulkV2"
+
             message = f"{result}\n\nClick here for more info :-  {preventation__url_mail}"
 
-            payload = f"sender_id=TXTIND&message={message}&route=v3&numbers={number}"
+            payload = f"sender_id=FastSM&message={message}&route=v3&numbers={number}"
+
             headers = {
-                'authorization': "FayAgUYBN0HciurDeTvdhsm4SIxtQ7O85jZRX6ElowP2WGkMVqMNvGYljBCTkqFWctdiygHx54bfSsZQ",
+                'authorization': "ZcnzxpgJhSDVUGjIYBavCX15byL3OekTi0droFK9WN8mfR4sA7v1EUSmDzKVFqhH3Gneu8QyXCWLwl07",
                 'Content-Type': "application/x-www-form-urlencoded",
                 'Cache-Control': "no-cache",
             }
@@ -191,10 +221,14 @@ def index():
             response = requests.request(
                 "POST", url, data=payload, headers=headers)
 
-            # return render_template("login.html")
+            if (response.json()["return"]):
+                return render_template("index.html")
+            else:
+                return render_template('error404.html', error=response.json()["message"] + ", Cannot able to send the result please try again from the authorization")
 
         except:
             return render_template('error404.html', error="Cannot able to send the result please try again from the authorization")
+
     return render_template("index.html")
 
 
